@@ -3,8 +3,54 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "91b68680fa1fb7a48fe45bb20daa62f0",
+    "hash": "f50ccfb6af6009c64d13fb73c0150423",
     "packages": [
+        {
+            "name": "easybib/silex-elastica",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/easybiblabs/silex-elastica.git",
+                "reference": "d36c9419dd599f0b64a1897f898e16e3f152eb10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/easybiblabs/silex-elastica/zipball/d36c9419dd599f0b64a1897f898e16e3f152eb10",
+                "reference": "d36c9419dd599f0b64a1897f898e16e3f152eb10",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "ruflin/elastica": "~0.90.2",
+                "silex/silex": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "EasyBib\\Service\\Elastica": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                }
+            ],
+            "description": "A Silex Service Provider for Elastica",
+            "keywords": [
+                "elastic",
+                "elastica",
+                "elasticsearch",
+                "search",
+                "silex"
+            ],
+            "time": "2013-12-18 20:31:26"
+        },
         {
             "name": "pimple/pimple",
             "version": "v1.1.0",
@@ -88,6 +134,57 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "ruflin/elastica",
+            "version": "v0.90.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ruflin/Elastica.git",
+                "reference": "e36213362ef459f92e8b09167e537e9312f55ae3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/e36213362ef459f92e8b09167e537e9312f55ae3",
+                "reference": "e36213362ef459f92e8b09167e537e9312f55ae3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "munkie/elasticsearch-thrift-php": "1.4.*",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "monolog/monolog": "Logging request",
+                "munkie/elasticsearch-thrift-php": "Allow using thrift transport",
+                "psr/log": "for logging"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Elastica": "lib/",
+                    "Elastica\\Test": "test/lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Ruflin",
+                    "homepage": "http://ruflin.com/"
+                }
+            ],
+            "description": "Elasticsearch Client",
+            "homepage": "http://elastica.io/",
+            "keywords": [
+                "client",
+                "search"
+            ],
+            "time": "2013-11-23 21:35:18"
         },
         {
             "name": "silex/silex",
@@ -477,9 +574,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "easybib/silex-elastica": 20
+    },
     "platform": [
 
     ],
