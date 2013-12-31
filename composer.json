@@ -1,5 +1,11 @@
 {
     "require": {
-        "silex/silex": "~1.1"
+        "silex/silex": "~1.1",
+        "easybib/silex-elastica": "@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
     }
 }
