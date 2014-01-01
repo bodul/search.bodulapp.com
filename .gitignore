@@ -15,3 +15,5 @@
 #ignoring phpunit.phar in root folder
 /phpunit.phar
 
+#ignoring config.php
+/app/config/config.php
