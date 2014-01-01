@@ -1,0 +1,4 @@
+<?php
+
+define('ELASTICA_HOST', 'localhost');
+define('ELASTICA_PORT', 9200);
