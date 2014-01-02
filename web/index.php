@@ -44,10 +44,13 @@ $app->get(
             // Iterate through results and prepare data,
             foreach ($locator->getData()->getResults() as $result) {
 
-                $arr           = $result->getData();
-                $arr['_score'] = $result->getScore();
+                $data = $result->getData();
 
-                $results[] = $arr;
+                $results[] = array(
+                    'id'     => $data['productId'],
+                    'value'  => $data['productTitle'],
+                    '_score' => $result->getScore()
+                );
             }
 
             // If there were results cache them.
