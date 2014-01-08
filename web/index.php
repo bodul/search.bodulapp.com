@@ -1,6 +1,6 @@
 <?php
 // web/index.php
-use \Bodul\Search\ElasticLocator;
+use \Bodul\Search\ElasticLocator2;
 use \Bodul\Search\Cache;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -39,7 +39,7 @@ $app->get(
             $results = array();
 
             // Instantiating locator.
-            $locator = new ElasticLocator($app['elastica'], $name);
+            $locator = new ElasticLocator2($app['elastica'], $name);
 
             // Iterate through results and prepare data,
             foreach ($locator->getData()->getResults() as $result) {
