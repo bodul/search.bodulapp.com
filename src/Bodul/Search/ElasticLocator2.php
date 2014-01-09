@@ -32,15 +32,15 @@ class ElasticLocator2
 
 
         $fieldQueryTitle = new \Elastica\Query\Text();
-        $fieldQueryTitle->setFieldQuery('productTitle', $this->getTerm());
-        $fieldQueryTitle->setFieldParam('productTitle', 'analyzer', 'searchAnalyzer');
-        $fieldQueryTitle->setFieldParam('productTitle', 'operator', 'and');
+        $fieldQueryTitle->setFieldQuery('productTitleTokenized', $this->getTerm());
+        //$fieldQueryTitle->setFieldParam('productTitle', 'analyzer', 'searchAnalyzer');
+        $fieldQueryTitle->setFieldParam('productTitleTokenized', 'operator', 'and');
         $boolQuery->addShould($fieldQueryTitle);
 
         $fieldQueryDescription = new \Elastica\Query\Text();
-        $fieldQueryDescription->setFieldQuery('productDescription', $this->getTerm());
-        $fieldQueryDescription->setFieldParam('productDescription', 'analyzer', 'searchAnalyzer');
-        $fieldQueryDescription->setFieldParam('productDescription', 'operator', 'and');
+        $fieldQueryDescription->setFieldQuery('productDescriptionTokenized', $this->getTerm());
+        //$fieldQueryDescription->setFieldParam('productDescription', 'analyzer', 'searchAnalyzer');
+        $fieldQueryDescription->setFieldParam('productDescriptionTokenized', 'operator', 'and');
         $boolQuery->addShould($fieldQueryDescription);
 
         $query = new \Elastica\Query($boolQuery);
