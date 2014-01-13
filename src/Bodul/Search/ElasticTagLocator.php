@@ -44,7 +44,7 @@ class ElasticTagLocator
         $boolQuery->addMust($fieldQueryTitleTokenized);
 
         //Tag status should be: new, not enough and enabled.
-        $filter = new \Elastica\Query\Terms('tagStatus', array(0, 11, 81));
+        $filter = new \Elastica\Query\Terms('tagStatus', array(81));
         $boolQuery->addMust($filter);
 
 
