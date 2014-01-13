@@ -54,6 +54,7 @@ class ElasticTagLocator
                  'id', 'tagName'
             )
         );
+        /*
         $query->setSort(
             array(
                  'tagStatus' =>
@@ -64,6 +65,7 @@ class ElasticTagLocator
                  array('order' => 'DESC')
             )
         );
+        */
 
 
         $search = new \Elastica\Search($this->connector);
