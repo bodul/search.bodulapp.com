@@ -1,6 +1,7 @@
 <?php
 // web/index.php
 use \Bodul\Search\ElasticLocator2;
+use \Bodul\Search\ElasticTagLocator;
 use \Bodul\Search\Cache;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -39,7 +40,7 @@ $app->get(
             $results = array();
 
             // Instantiating locator.
-            $locator = new ElasticLocator2($app['elastica'], $name);
+            $locator = new ElasticTagLocator($app['elastica'], $name);
 
             // Iterate through results and prepare data,
             foreach ($locator->getData()->getResults() as $result) {
@@ -47,8 +48,8 @@ $app->get(
                 $data = $result->getData();
 
                 $results[] = array(
-                    'id'     => $data['productId'],
-                    'value'  => $data['productTitle'],
+                    'id'     => $data['id'],
+                    'value'  => $data['tagName'],
                     '_score' => $result->getScore()
                 );
             }
