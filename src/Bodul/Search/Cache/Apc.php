@@ -56,7 +56,7 @@ class Apc
     {
         $this->setResult($result);
 
-        apc_add($this->cacheKey, $this->getResult(), 10);
+        apc_add($this->cacheKey, $this->getResult(), 120);
     }
 
     public function getResult()
